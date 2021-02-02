@@ -38,10 +38,13 @@ if(isset($_POST['option'.($subqueskey+1)])){
 }
    
 }
-
-echo '<div class="btnDiv"><h1>Your Final Score is '.$result.'!!<br>Congratulations!!!!</h1></div>
+if($result>4){
+echo '<div class="btnDiv"><h1>Your Final Score is '.$result.'!!<br>Congratulations !!!!</h1></div>
 <button class="btn btn-success" type="button" value="Restart"><a href="index.php">Restart The Game</a></button>';
-
+}else{
+    echo '<div class="btnDiv"><h1>Your Final Score is '.$result.'!!<br>Better Luck Next Time !!!!</h1></div>
+<button class="btn btn-success" type="button" value="Restart"><a href="index.php">Restart The Game</a></button>';
+}
 
 ?>
 
